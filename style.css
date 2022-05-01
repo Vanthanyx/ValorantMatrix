@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@500&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+}
+ body {
+     background: black;
+}
+ canvas {
+     display: block;
+}
+ div {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     width: 300px;
+     height: 80px;
+     box-shadow: 0 0 0 1px #999;
+     cursor: pointer;
+}
+ div:before,div:after {
+     content: "";
+     position: absolute;
+     background: #0f1923;
+     width: 2px;
+     height: 10px;
+     top: calc(50% - 5px);
+}
+ div:before{
+     left: -1px;
+}
+ div:after{
+     right: -1px;
+}
+ button {
+     position: absolute;
+     left: 7px;
+     top: 7px;
+     width: calc(100% - 14px);
+     height: calc(100% - 14px);
+     background: none;
+     outline: none;
+     border: none;
+     font-size: 19px;
+     text-transform: uppercase;
+     overflow: hidden;
+     font-weight: bold;
+     cursor: pointer;
+     transition: 0.1s;
+     font-family: 'Roboto', sans-serif;
+     box-shadow: 0 0 0 1px #FF4655;
+     color: #FF4655;
+}
+ button:hover {
+     color: #fff;
+}
+ button:before,button:after{
+     content: "";
+     position: absolute;
+     background: #0f1923;
+     width: 6px;
+     height: 6px;
+     z-index: -1;
+}
+ button:before {
+     left: -1px;
+     top: -1px;
+}
+ button:after {
+     right: -1px;
+     bottom: -1px;
+     transition: 0.2s;
+}
+ span {
+     clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+     width: 110%;
+     height: calc(100% + 2px);
+     background: #FF4655;
+     display: block;
+     position: absolute;
+     left: -320px;
+     top: -1px;
+     transition: 0.4s;
+     z-index: -1;
+}
+ button:hover span {
+     left: 0;
+}
+ button:hover:after {
+     background: #fff;
+}
+ #button2 {
+     box-shadow: 0 0 0 1px #7851a9 !important;
+     color: #7851a9 !important;
+}
+ #span2 {
+     background: #7851a9 !important;
+}
+ #button2:hover {
+     color: #fff !important;
+}
+ #color {
+     color: #FF4655;
+     font-family: helvetica, arial, sans-serif;
+     font-size: 1.2em;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     z-index: 1000;
+}
+ 
